@@ -8,6 +8,9 @@ function BookList() {
     { id: 3, title: 'Book Three', author: 'Author Three' },
   ])
 
+  const blockDefault = () => {
+    removeBook()
+  }
   const removeBook = (id) => {
     setBooks(books.filter((book) => book.id !== id))
   }
