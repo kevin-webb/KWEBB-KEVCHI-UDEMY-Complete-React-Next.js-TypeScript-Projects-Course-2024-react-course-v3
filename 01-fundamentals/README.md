@@ -1,5 +1,9 @@
 # React Fundamentals
 
+## Remindders:
+
+- Remember to install npm (npm install) in every folder.
+
 #### React Course
 
 [My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
@@ -110,7 +114,32 @@ Just restart the server
 
 - Auto Rename Tag
 - Highlight Matching Tag
-  - customize in settings.json
+  settings.json
+
+```json
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "left": {
+        "custom": {
+          "borderWidth": "0 0 0 3px",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "5px"
+        }
+      },
+      "right": {
+        "custom": {
+          "borderWidth": "0 0 0 3px",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "5px"
+        }
+      }
+    }
+  },
+```
+
+- customize in settings.json
 - Prettier
   - format on save
   - format on paste
@@ -214,7 +243,7 @@ return (
 - className instead of class
 
 ```js
-return <div className='someValue'>hello</div>;
+return <div className="someValue">hello</div>;
 ```
 
 - close every element
@@ -232,16 +261,16 @@ return <input />;
 function Greeting() {
   return (
     <>
-      <div className='someValue'>
+      <div className="someValue">
         <h3>hello people</h3>
         <ul>
           <li>
-            <a href='#'>hello world</a>
+            <a href="#">hello world</a>
           </li>
         </ul>
       </div>
       <h2>hello world</h2>
-      <input type='text' name='' id='' />
+      <input type="text" name="" id="" />
     </>
   );
 }
@@ -335,7 +364,7 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article className='book'>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -345,8 +374,8 @@ const Book = () => {
 
 const Image = () => (
   <img
-    src='https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg'
-    alt='Interesting Facts For Curious Minds'
+    src="https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg"
+    alt="Interesting Facts For Curious Minds"
   />
 );
 const Title = () => {
@@ -385,7 +414,7 @@ import './index.css';
 
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       <Book />
       <Book />
       <Book />
@@ -396,7 +425,7 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article className='book'>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -455,7 +484,7 @@ const Book = () => {
 
 ```js
 const Image = () => (
-  <img src='./images/book-1.jpg' alt='Interesting Facts For Curious Minds' />
+  <img src="./images/book-1.jpg" alt="Interesting Facts For Curious Minds" />
 );
 ```
 
@@ -515,10 +544,10 @@ const Author = () => {
 ```js
 const Book = () => {
   return (
-    <article className='book'>
+    <article className="book">
       <img
-        src='./images/book-1.jpg'
-        alt='Interesting Facts For Curious Minds'
+        src="./images/book-1.jpg"
+        alt="Interesting Facts For Curious Minds"
       />
       <h2>Interesting Facts For Curious Minds</h2>
       <h4>Jordan Moore </h4>
@@ -545,10 +574,10 @@ const author = 'Jordan Moore';
 const Book = () => {
   const title = 'Interesting Facts For Curious Mindssssss';
   return (
-    <article className='book'>
+    <article className="book">
       <img
-        src='./images/book-1.jpg'
-        alt='Interesting Facts For Curious Minds'
+        src="./images/book-1.jpg"
+        alt="Interesting Facts For Curious Minds"
       />
       <h2>{title}</h2>
 
@@ -573,7 +602,7 @@ const img = './images/book-1.jpg';
 
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       <Book />
       <Book />
     </section>
@@ -581,7 +610,7 @@ function BookList() {
 }
 const Book = () => {
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -603,7 +632,7 @@ someFunc('job', 'developer');
 const Book = (props) => {
   console.log(props);
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -621,16 +650,16 @@ const Book = (props) => {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
-      <Book job='developer' />
-      <Book title='random title' number={22} />
+    <section className="booklist">
+      <Book job="developer" />
+      <Book title="random title" number={22} />
     </section>
   );
 }
 const Book = (props) => {
   console.log(props);
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -645,7 +674,7 @@ const Book = (props) => {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       <Book author={author} title={title} img={img} />
       <Book title={title} img={img} />
     </section>
@@ -654,7 +683,7 @@ function BookList() {
 const Book = (props) => {
   console.log(props);
   return (
-    <article className='book'>
+    <article className="book">
       <img src={props.img} alt={props.title} />
       <h2>{props.title}</h2>
       <h4>{props.author} </h4>
@@ -685,7 +714,7 @@ const secondBook = {
 
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       <Book
         author={firstBook.author}
         title={firstBook.title}
@@ -702,7 +731,7 @@ function BookList() {
 const Book = (props) => {
   console.log(props);
   return (
-    <article className='book'>
+    <article className="book">
       <img src={props.img} alt={props.title} />
       <h2>{props.title}</h2>
       <h4>{props.author} </h4>
@@ -742,7 +771,7 @@ console.log(job);
 const Book = (props) => {
   const { img, title, author } = props;
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -757,7 +786,7 @@ const Book = (props) => {
 ```js
 const Book = ({ img, title, author }) => {
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -776,7 +805,7 @@ const Book = ({ img, title, author }) => {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       <Book
         author={firstBook.author}
         title={firstBook.title}
@@ -804,7 +833,7 @@ const Book = (props) => {
   const { img, title, author, children } = props;
   console.log(props);
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -849,14 +878,14 @@ const books = [
 ];
 
 function BookList() {
-  return <section className='booklist'></section>;
+  return <section className="booklist"></section>;
 }
 
 const Book = (props) => {
   const { img, title, author } = props;
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -869,7 +898,7 @@ const Book = (props) => {
 
 ```js
 function BookList() {
-  return <section className='booklist'>{books}</section>;
+  return <section className="booklist">{books}</section>;
 }
 ```
 
@@ -883,7 +912,7 @@ const newNames = names.map((name) => {
 });
 
 function BookList() {
-  return <section className='booklist'>{newNames}</section>;
+  return <section className="booklist">{newNames}</section>;
 }
 ```
 
@@ -894,7 +923,7 @@ function BookList() {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         console.log(book);
 
@@ -916,7 +945,7 @@ function BookList() {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         console.log(book);
         const { img, title, author } = book;
@@ -949,7 +978,7 @@ const books = [
 
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         console.log(book);
         const { img, title, author, id } = book;
@@ -965,7 +994,7 @@ function BookList() {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book, index) => {
         console.log(book);
         const { img, title, author, id } = book;
@@ -986,7 +1015,7 @@ function BookList() {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         console.log(book);
         const { img, title, author } = book;
@@ -1000,7 +1029,7 @@ const Book = (props) => {
   const { img, title, author } = props.book;
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -1014,7 +1043,7 @@ const Book = (props) => {
 ```js
 const Book = ({ book: { img, title, author } }) => {
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -1047,7 +1076,7 @@ console.log(newObject);
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         return <Book {...book} key={book.id} />;
       })}
@@ -1058,7 +1087,7 @@ function BookList() {
 const Book = (props) => {
   const { img, title, author } = props;
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
@@ -1110,7 +1139,7 @@ const EventExamples = () => {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       <EventExamples />
       {books.map((book) => {
         return <Book {...book} key={book.id} />;
@@ -1131,8 +1160,8 @@ const EventExamples = () => {
       <form>
         <h2>Typical Form</h2>
         <input
-          type='text'
-          name='example'
+          type="text"
+          name="example"
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }}
         />
@@ -1167,13 +1196,13 @@ const EventExamples = () => {
       <form onSubmit={handleFormSubmission}>
         <h2>Typical Form</h2>
         <input
-          type='text'
-          name='example'
+          type="text"
+          name="example"
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }}
         />
         {/* add button with type='submit' */}
-        <button type='submit'>submit form</button>
+        <button type="submit">submit form</button>
       </form>
       <button onClick={handleButtonClick}>click me</button>
     </section>
@@ -1184,7 +1213,7 @@ const EventExamples = () => {
 - alternative approach
 
 ```js
-<button type='submit' onClick={handleFormSubmission}>
+<button type="submit" onClick={handleFormSubmission}>
   submit form
 </button>
 ```
@@ -1214,8 +1243,8 @@ const EventExamples = () => {
       <form>
         <h2>Typical Form</h2>
         <input
-          type='text'
-          name='example'
+          type="text"
+          name="example"
           onChange={(e) => console.log(e.target.value)}
           style={{ margin: '1rem 0' }}
         />
@@ -1234,7 +1263,7 @@ const EventExamples = () => {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         return <Book {...book} key={book.id} />;
       })}
@@ -1249,7 +1278,7 @@ const Book = (props) => {
   };
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <button onClick={displayTitle}>display title</button>
@@ -1273,7 +1302,7 @@ function BookList() {
     console.log(someValue);
   };
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         return <Book {...book} key={book.id} displayValue={displayValue} />;
       })}
@@ -1285,7 +1314,7 @@ const Book = (props) => {
   const { img, title, author, displayValue } = props;
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <button onClick={displayValue}>click me</button>
@@ -1314,7 +1343,7 @@ const BookList = () => {
   };
 
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         return <Book {...book} key={book.id} getBook={getBook} />;
       })}
@@ -1327,7 +1356,7 @@ const Book = (props) => {
   // console.log(props);
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       {/* this is not going to work */}
@@ -1349,7 +1378,7 @@ const Book = (props) => {
     getBook(id);
   };
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <button onClick={getSingleBook}>display title</button>
@@ -1370,7 +1399,7 @@ const Book = (props) => {
     getBook(id);
   };
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
 
@@ -1388,7 +1417,7 @@ const Book = (props) => {
 ```js
 function BookList() {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book) => {
         return <Book {...book} key={book.id} />;
       })}
@@ -1400,7 +1429,7 @@ const Book = (props) => {
   const { img, title, author } = props;
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
 
@@ -1470,7 +1499,7 @@ const Book = (props) => {
   const { img, title, author } = props;
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
 
@@ -1536,7 +1565,7 @@ index.js
 ```js
 const BookList = () => {
   return (
-    <section className='booklist'>
+    <section className="booklist">
       {books.map((book, index) => {
         return <Book {...book} key={book.id} number={index} />;
       })}
@@ -1548,12 +1577,12 @@ const Book = (props) => {
   const { img, title, author, number } = props;
 
   return (
-    <article className='book'>
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
 
       <h4>{author}</h4>
-      <span className='number'>{`# ${number + 1}`}</span>
+      <span className="number">{`# ${number + 1}`}</span>
     </article>
   );
 };
@@ -1596,7 +1625,7 @@ function BookList() {
   return (
     <>
       <h1>amazon best sellers</h1>
-      <section className='booklist'>
+      <section className="booklist">
         {books.map((book) => {
           return <Book {...book} key={book.id} />;
         })}
@@ -1713,3 +1742,22 @@ npm run dev
 - to spin up dev server - "npm run dev"
 
 - rest the same - imports/exports, deployment, assets, etc...
+
+/\*\*
+
+- Notes:
+- 1.  Component Organization:
+- - Components are organized hierarchically
+- - Each component has a single responsibility
+-
+- 2.  Future Improvements:
+- - Add props for dynamic data
+- - Implement event handlers
+- - Add proper styling
+- - Include error boundaries
+-
+- 3.  React Concepts Demonstrated:
+- - Component composition
+- - JSX syntax
+- - Different component declaration styles
+    \*/
