@@ -22,7 +22,6 @@ body {
 @media screen and (min-width: 768px) {
   .booklist {
     grid-template-columns: repeat(3, 1fr);
-    align-items: start;
   }
 }
 .book {
