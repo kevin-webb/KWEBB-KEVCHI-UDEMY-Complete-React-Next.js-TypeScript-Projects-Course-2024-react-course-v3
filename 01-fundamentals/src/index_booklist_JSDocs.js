@@ -1,11 +1,20 @@
-// index_test
+// index_booklist_JSDocs
 
-// React component structure for a book listing app
-import React from 'react'; // Not required but recommended
-import ReactDOM from 'react-dom/client'; // Not required but recommended
+/**
+ * @fileoverview BookList application component structure
+ * @description Renders a list of books with their images, titles, and authors
+ * @author Kevin Chisholm
+ * @version 1.0.0
+ */
 
-// (PARENT - Level 1)
-// Renders a section containing multiple Book components
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+/**
+ * @component BookList
+ * @description Parent component that renders multiple Book components
+ * @returns {JSX.Element} A section containing multiple Book components
+ */
 function BookList() {
   return (
     <section>
@@ -17,9 +26,11 @@ function BookList() {
   );
 }
 
-// (CHILD - Level 2)
-// Renders a single book's layout containing image, title, and author components,
-// who's reference is passed to the BookList component
+/**
+ * @component Book
+ * @description Container component for book information
+ * @returns {JSX.Element} Article containing book image, title, and author
+ */
 const Book = () => {
   return (
     <article>
@@ -30,20 +41,20 @@ const Book = () => {
   );
 };
 
-// (GRANDCHILD - Level 3)
-// Individual components used to reference each each element in an array,
-// which is then passed to the Book component.
-const Image = () => <h2>image placeholder</h2>; // Represents book cover from the array
-const Title = () => <h2>Book Title</h2>; // Represents book's title from the array
-const Author = () => <h4>Author</h4>; // Represents Author name from the array
+/**
+ * Child Components
+ * @component Image - Placeholder for book cover image
+ * @component Title - Displays book title
+ * @component Author - Shows author name
+ *
+ * @returns {JSX.Element} Each returns a heading element
+ */
+const Image = () => <h2>image placeholder</h2>;
+const Title = () => <h2>Book Title</h2>;
+const Author = () => <h4>Author</h4>;
 
-// Initialize React Root
-// - Looks in your HTML file for an div with id="root".
-// - The html div serves as a container for the entire React application.
-// - ReactDOM.createRoot(...) telling React "this is where I want my app to live".
+// Root rendering setup
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<BookList />) takes the BookList component and all of its child components
-// and renders them inside that root div.
 root.render(<BookList />);
 
 /* 

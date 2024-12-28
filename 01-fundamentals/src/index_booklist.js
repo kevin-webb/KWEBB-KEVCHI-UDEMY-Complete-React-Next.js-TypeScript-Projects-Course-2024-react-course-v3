@@ -1,4 +1,8 @@
-// index_test
+// index_booklist
+
+/**
+ * The following comments are for my purposes only, I have intentionally omitted JSDocs and provided explanations to help me solidify key concepts that govern the code block, therefore you will see comments describing what the code does and not just the WHY behind a code block.
+ */
 
 // React component structure for a book listing app
 import React from 'react'; // Not required but recommended
@@ -44,6 +48,53 @@ const Author = () => <h4>Author</h4>; // Represents Author name from the array
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<BookList />) takes the BookList component and all of its child components
 // and renders them inside that root div.
+root.render(<BookList />);
+
+/**
+ * @component BookList
+ * @description Parent component that renders multiple Book components
+ * @returns {JSX.Element} A section containing multiple Book components
+ */
+function BookList() {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+}
+
+/**
+ * @component Book
+ * @description Container component for book information
+ * @returns {JSX.Element} Article containing book image, title, and author
+ */
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+
+/**
+ * Child Components
+ * @component Image - Placeholder for book cover image
+ * @component Title - Displays book title
+ * @component Author - Shows author name
+ *
+ * @returns {JSX.Element} Each returns a heading element
+ */
+const Image = () => <h2>image placeholder</h2>;
+const Title = () => <h2>Book Title</h2>;
+const Author = () => <h4>Author</h4>;
+
+// Root rendering setup
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<BookList />);
 
 /* 
