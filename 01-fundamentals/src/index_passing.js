@@ -1,4 +1,4 @@
-// index_prop_passing
+// index_passing
 
 /**
   The following comments are for my purposes only, I have intentionally omitted JSDocs and provided explanations to help me solidify key concepts that govern the code block, therefore you will see comments describing what the code does and not just the WHY behind a code block.

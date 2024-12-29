@@ -1,4 +1,4 @@
-// index_topic_31
+// index_topic_30_v2
 
 /**
   The following comments are for my purposes only, I have intentionally omitted JSDocs and provided explanations to help me solidify key concepts that govern the code block, therefore you will see comments describing what the code does and not just the WHY behind a code block.
@@ -14,46 +14,25 @@ import './index.css';
 
 // React work using a one-way data flow method in-which data flows down then React deals with the rendering and DOM manipulation.
 
-const firstBook = {
-  author: 'Jordan Moore',
-  title: 'Interesting Facts For Curious Minds',
-  img: './images/book-1.jpg',
-};
-const secondBook = {
-  author: 'James Clear',
-  title: 'Atomic Habits',
-  img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
-};
+const author = 'Rebecca Yarros';
+const title = 'Onyx Storm (Deluxe Limited Edition) (The Empyrean, 3)';
+const img = './images/9101MLPcFTL._SY466_.jpg';
 
 // (PARENT - Level 1)
 // This is telling React that 4 Book component will be returning inside a section element.
 function BookList() {
   return (
     <section className="booklist">
-      {/* <Book `reference holder` = {`variable name (firstBook)`.`Object property (author)` this comes from the variable object} /> */}
-      {/* same as <Book `prop name/key`={`variable name (secondBook)`.`Object key(author)` this comes from the variable object /> */}
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      />
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
+      <Book banana={author} title={title} img={img} />
+      {/* <Book `reference holder` = {variable name, from the declared variable} /> */}
+      {/* same as <Book `prop name` = {variable name, from the declared variable} /> */}
+      {/* same as <Book `prop key` = {variable name, from the declared variable} /> */}
+      <Book banana={author} title={title} img={img} />
+      <Book banana={author} title={title} img={img} />
+      <Book banana={author} title={title} img={img} />
     </section>
   );
 }
-
-/**
-<Book author={firstBook.author} />
-//    ^      ^         ^
-//    |      |         |
-//    |      |         Object property (author)
-//    |      variable name (firstBook)
-//    reference holder
- */
 
 // (CHILD - Level 2)
 // This is telling React that and article element that encapsulate an Image, Title, and Author components will be returning
@@ -66,7 +45,7 @@ const Book = (props) => {
       {/* same as <h2>{props.`prop name`}</h2> */}
       <h2>{props.title}</h2>
       {/* same as <h2>{props.`prop key`}</h2> */}
-      <h4>{props.author.toUpperCase()}</h4>
+      <h4>{props.banana.toUpperCase()}</h4>
     </article>
   );
 };
