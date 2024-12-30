@@ -19,11 +19,6 @@ body {
   gap: 2rem;
 }
 
-@media screen and (min-width: 768px) {
-  .booklist {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 .book {
   background: #fff;
   border-radius: 1rem;
@@ -52,4 +47,14 @@ h1 {
   text-align: center;
   margin-top: 4rem;
   text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+.book p {
+  margin: 1rem 0 0.5rem;
 }
