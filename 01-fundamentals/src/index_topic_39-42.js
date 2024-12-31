@@ -1,4 +1,4 @@
-// index_topic_39
+// index_topic_39-42
 
 // React component structure for a book listing app
 import React from 'react'; // Not required but recommended
@@ -50,6 +50,8 @@ const EventExamples = () => {
           //
           style={{ margin: '1rem 0' }}
         />
+        {/* The only thing that goes inside a React event handler parameters is the
+      event object (commonly written as 'e' or 'event')*/}
         <button
           type="submit"
           onClick={(e) => {
