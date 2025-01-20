@@ -24,7 +24,22 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  /* set relative */
+  position: relative;
 }
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #c35600;
+  color: #fff;
+}
+
 .book img {
   width: 100%;
   object-fit: cover;
