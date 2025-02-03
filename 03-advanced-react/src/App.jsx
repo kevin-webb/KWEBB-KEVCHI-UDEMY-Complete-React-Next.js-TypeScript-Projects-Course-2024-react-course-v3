@@ -2,7 +2,7 @@
 // import viteLogo from '/vite.svg';
 import './App.css';
 
-import Starter from './tutorial/01-useState/starter/03-useState-array';
+import Starter from './tutorial/02-useEffect/starter/01-code-example';
 
 function App() {
   return (

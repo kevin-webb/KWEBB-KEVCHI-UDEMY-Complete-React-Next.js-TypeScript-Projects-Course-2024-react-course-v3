@@ -6,7 +6,8 @@ const UseStateArray = () => {
 
   const removeItem = (id) => {
     setList(list.filter((item) => item.id !== id));
-    // const newList = list.filter((item) => item.id !== id);
+    // let newList = list.filter((item) => item.id !== id);
+    // setList(newList);
   };
 
   const removeAllItems = () => {
